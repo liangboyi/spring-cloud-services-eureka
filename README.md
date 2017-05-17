@@ -12,7 +12,6 @@
 
    eureka-customer-client
 
----
 
 #### eureka-service
 
