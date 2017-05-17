@@ -1,0 +1,21 @@
+Untagged: 10.14.255.176/spring-cloud-test/eureka-client:latest
+Untagged: 10.14.255.176/spring-cloud-test/eureka-client@sha256:34b93540e76cf47151fa3164714a1fa59bb9ac1daf13dd40ff33a4018316e1c7
+Deleted: sha256:c8595a91c90a7d46a051078fda730c5ebb0f3c7e24b9967704d36f9270d913c4
+Deleted: sha256:153a332995ba3012ae3362f7a1eacc80346cf8f1181ad3eeca8170fab1a838b9
+Deleted: sha256:46f1df1cc76d2ac6da060d3c9028a687391d864a65d313a0a551b3fc87cc90ac
+Deleted: sha256:00cb3fe2d6da9a0e98fff724a73785f3a6a19bb4d9ad2a61d285ff06a6a107bd
+Sending build context to Docker daemon 243.1 MB
+Step 1/4 : FROM frolvlad/alpine-oraclejdk8:slim
+ ---> ce0bf5ef511b
+Step 2/4 : EXPOSE 8080
+ ---> Running in 3477cdddc817
+ ---> 7d469a92caf7
+Removing intermediate container 3477cdddc817
+Step 3/4 : COPY eureka-client.jar .
+ ---> 0e2013bb3a7f
+Removing intermediate container 32602cfbc7c0
+Step 4/4 : CMD java -jar eureka-client.jar
+ ---> Running in ef750501fbd3
+ ---> d53f64618750
+Removing intermediate container ef750501fbd3
+Successfully built d53f64618750

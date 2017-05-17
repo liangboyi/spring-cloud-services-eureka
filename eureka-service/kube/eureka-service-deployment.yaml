@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: spring-cloud-eureka
+  namespace: spring-cloud
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        k8s-app: spring-cloud-eureka
+    spec:
+      containers:
+      - name: spring-cloud-eureka
+        image: 10.14.255.176/spring-cloud/eureka:latest
+        #imagePullPolicy: IfNotPresent
+        ports:
+          - containerPort: 8761
+            protocol: TCP

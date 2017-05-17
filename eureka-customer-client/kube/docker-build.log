@@ -1,0 +1,25 @@
+Error response from daemon: No such image: 10.14.255.176/spring-cloud-test/eureka-customer-client:latest
+Sending build context to Docker daemon 37.98 MB
+Step 1/4 : FROM frolvlad/alpine-oraclejdk8:slim
+ ---> ce0bf5ef511b
+Step 2/4 : EXPOSE 8080
+ ---> Using cache
+ ---> 7d469a92caf7
+Step 3/4 : COPY eureka-customer-client.jar .
+ ---> 4eec4ddedafc
+Removing intermediate container 40a1009cb611
+Step 4/4 : CMD java -jar eureka-customer-client.jar
+ ---> Running in 2eb99d386f1c
+ ---> 0d39bccd302e
+Removing intermediate container 2eb99d386f1c
+Successfully built 0d39bccd302e
+The push refers to a repository [10.14.255.176/spring-cloud-test/eureka-customer-client]
+ea2abdbbf471: Preparing
+a41c8c4bcb8e: Preparing
+d677fc407b01: Preparing
+e154057080f4: Preparing
+e154057080f4: Pushed
+d677fc407b01: Pushed
+ea2abdbbf471: Pushed
+a41c8c4bcb8e: Pushed
+latest: digest: sha256:2889a76faa7952000f73da0ae1559c058d1868db6e7aa177c21fa561b40ad1ab size: 1163

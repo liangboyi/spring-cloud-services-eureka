@@ -1,0 +1,29 @@
+Untagged: 10.14.255.176/spring-cloud-test/eureka-customer-service:latest
+Untagged: 10.14.255.176/spring-cloud-test/eureka-customer-service@sha256:d891040c89d555a9bdf8cacb656c10e65b006354fede62472d69ea3291eaeec9
+Deleted: sha256:c80a1c80bb4d32ecded13944aa6cbf08f2b64f46f80346d5701acc8e7cd4f5f3
+Deleted: sha256:5e9886ef659a263519034c9bb959ab2b0d4e1f74faf2a3d82a985e04a2ddf94b
+Deleted: sha256:00c32551cb1f3b17c9d4af2495f3eacd53ceb476fa71a2b120190341d1229653
+Sending build context to Docker daemon 38.56 MB
+Step 1/4 : FROM frolvlad/alpine-oraclejdk8:slim
+ ---> ce0bf5ef511b
+Step 2/4 : EXPOSE 8080
+ ---> Using cache
+ ---> 7d469a92caf7
+Step 3/4 : COPY eureka-customer-service.jar .
+ ---> af17273abde7
+Removing intermediate container 61865615253d
+Step 4/4 : CMD java -jar eureka-customer-service.jar
+ ---> Running in 7f0677aa4a5b
+ ---> acc29ce9b156
+Removing intermediate container 7f0677aa4a5b
+Successfully built acc29ce9b156
+The push refers to a repository [10.14.255.176/spring-cloud-test/eureka-customer-service]
+76e4757c4ac8: Preparing
+a41c8c4bcb8e: Preparing
+d677fc407b01: Preparing
+e154057080f4: Preparing
+a41c8c4bcb8e: Layer already exists
+d677fc407b01: Layer already exists
+e154057080f4: Layer already exists
+76e4757c4ac8: Pushed
+latest: digest: sha256:cdf06209336a8e522c433d333bd5cc50ff715d6da7c7372b180689a05a72cd3f size: 1163

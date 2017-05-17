@@ -1,0 +1,11 @@
+#idea file
+.idea
+*.iml
+**/*.iml
+
+#Mac File
+.DS_Store
+
+#Target Files
+*/target
+

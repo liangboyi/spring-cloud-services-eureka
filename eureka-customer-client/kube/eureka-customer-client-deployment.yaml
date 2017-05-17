@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: eureka-customer-client
+  namespace: spring-cloud
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        k8s-app: eureka-customer-client
+    spec:
+      containers:
+      - name: eureka-customer-client
+        image: 10.14.255.176/spring-cloud-test/eureka-customer-client:latest
+        #imagePullPolicy: IfNotPresent
+        ports:
+          - containerPort: 8080
+            protocol: TCP
