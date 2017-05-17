@@ -2,7 +2,7 @@
 
 1.eureka registory
 
-    eureka-service
+   eureka-service
 
 2.eureka customer service
 
@@ -66,7 +66,7 @@ eureka:
     preferIpAddress: true
 ```
 
-bootstrap.yml中eureka.client.serviceUrl.defaultZone配置eureka server的地址，其中http://spring-cloud-eureka:8761/eureka中的spring-cloud-eureka为eureka server的ip\(kube中暴露出service之后，起的名字为spring-cloud-eureka，本地启动可以在/etc/hosts中加上相应的映射即可，如 spring-cloud-eureka 127.0.0.1 \)
+bootstrap.yml中eureka.client.serviceUrl.defaultZone配置eureka server的地址，其中 http://spring-cloud-eureka:8761/eureka 中的spring-cloud-eureka为eureka server的ip\(kube中暴露出service之后，起的名字为spring-cloud-eureka，本地启动可以在/etc/hosts中加上相应的映射即可，如 spring-cloud-eureka 127.0.0.1 \)
 
 ```
 eureka:
@@ -95,9 +95,9 @@ spring:
 
 3.通过curl -X POST http://xxxx:8080/refresh 刷新git的值到spring-cloud-config中
 
-通过curl -X POST http://xxxx:8080/refresh命令，刷新github的值到config-server，如果github中有值修改过，自动刷新
+通过curl -X POST http://xxxx:8080/refresh 命令，刷新github的值到config-server，如果github中有值修改过，自动刷新
 
-配置@RefreshScope后，可通过curl -X POST http://ip:port/refresh更新环境变量的值
+配置@RefreshScope后，可通过curl -X POST http://ip:port/refresh 更新环境变量的值
 
 ```
 @RefreshScope
@@ -124,7 +124,7 @@ class CustomerServiceRestController {
 }
 ```
 
-application.yml中配置management.security.enabled.为false，如不配置，curl -X POST http://client:8080/时会报401错误
+application.yml中配置management.security.enabled.为false，如不配置，curl -X POST http://client:8080 时会报401错误
 
 ```
 server:
